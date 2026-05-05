@@ -10,10 +10,10 @@ def home():
 @app.route("/chat", methods=["POST"])
 def chat():
     data = request.json
-    message = data.get("message", "")
+    user_message = data.get("message", "")
 
     return jsonify({
-        "reply": f"You said: {message}"
+        "reply": f"Jerry received: {user_message}"
     })
 
 if __name__ == "__main__":
